@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de login</title>
+
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+</head>
+<body>
+    <main>
+        <section class="container">
+            <h1>LOGIN</h1>
+            <nav>
+                <ul>
+                    <li class="active"><a href="#" data-toggle="accordeon" data-target="#login">Login</a></li> | 
+                    <li><a href="#" data-toggle="accordeon" data-target="#cadastrar">Cadastrar</a></li>
+                </ul>
+            </nav>
+            <div id="tela" class="accordeon">
+                
+                <form action="" method="POST" name="login" class="item active" id="login">
+                    <label class="label">
+                        <span>Usuário</span>
+                        <input type="text" name="loginusuario" class="input" placeholder="Insira seu usuário" />
+                    </label>
+                    <label class="label">
+                        <span>Senha</span>
+                        <input type="password" name="loginsenha" class="input" placeholder="Insira sua senha" />
+                    </label>
+                    <div class="containerBtn">
+                        <button class="button">
+                            <ion-icon name="person-outline"></ion-icon>
+                            <span>LOGAR</span>
+                        </button>
+                    </div>
+                </form>
+
+                <form action="" method="POST" name="cadastrar" class="item" id="cadastrar">
+                    <label class="label">
+                        <span>E-mail</span>
+                        <input type="email" name="cadastraremail" class="input" placeholder="Insira seu e-mail" />
+                    </label>
+                    <label class="label">
+                        <span>Usuário</span>
+                        <input type="text" name="cadastrarusuario" class="input" placeholder="Insira seu usuário" />
+                    </label>
+                    <label class="label">
+                        <span>Senha</span>
+                        <input type="password" name="cadastrarsenha" class="input" placeholder="Insira sua senha" />
+                    </label>
+                    <label class="label">
+                        <span>Confirmar senha</span>
+                        <input type="password" name="cadastrarconfirmarsenha" class="input" placeholder="Confirme sua senha" />
+                    </label>
+                    <div class="containerBtn">
+                        <button class="button">
+                            <ion-icon name="person-add-outline"></ion-icon>
+                            <span>CADASTRAR</span>
+                        </button>
+                    </div>
+                </form>
+                
+            </div>
+
+            <div id="socials">
+                <p><small>Conecte-se com suas redes sociais</small></p>
+                <div class="container-socials">
+                    <a href="" class="account-link"><ion-icon name="logo-google"></ion-icon> <span>Google</span></a>
+                    <a href="" class="account-link"><ion-icon name="logo-facebook"></ion-icon> <span>Facebook</span></a>
+                    <a href="" class="account-link"><ion-icon name="logo-instagram"></ion-icon> <span>Instagram</span></a>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+    <footer id="footer">
+        <p>By Thiago webdeveloper</p>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="assets/js/funcs.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,52 @@
+:root{
+    --yellow: rgb(255,200,100);
+    --gray: rgb(150,150,150);
+    --light-gray: rgb(230,230,230);
+    --white: rgb(255,255,255);
+    --transparent: rgb(255,255,255);
+    --dark: rgb(44,44,44);
+}
+*{margin: 0 auto;padding: 0;box-sizing: border-box;}
+body{font-family: calibri,arial,sans-serif;color: var(--dark);font-size: 12pt;}
+main{display: flex;flex-flow: row;justify-content: center;align-items:center;width: 100vw;height: 100vh;background: var(--white);padding: 50px 0;}
+section.container{display: block;width: 90%;max-width: 400px;margin: 0 auto;padding: 20px;border-radius: 3px;box-shadow: 0 0 30px 5px var(--light-gray);animation: fadeInUp .4s linear forwards;transition: all .4s ease-in-out;}
+h1{color: var(--gray);font-size: 2rem;font-weight: 300;text-align: center;}
+nav{width: 100%;margin-top: 30px;}
+nav ul{list-style: none;text-align: center;}
+nav ul li{display: inline-block;border-bottom: 2px solid var(--transparent);}
+nav ul li.active{border-color: var(--yellow);}
+nav ul li a{display: inline-block;width: auto;height: auto;padding: 10px;color: var(--light-gray);font-size: 1.1rem;text-decoration: none;}
+nav ul li.active a{color: var(--dark)}
+nav ul li a.active,nav ul li a:hover{cursor: pointer;}        
+.accordeon{display: block;width: 100%;height: auto;padding: 20px 0;transition: all .4s ease-in-out;}
+.accordeon .item{display: none;}
+.accordeon .item.active{display: block;transition: all .4s ease-in-out;animation: fadeIn .4s linear forwards;}
+.accordeon .item .label{display: flex;flex-flow: row;width: 100%;height: auto;padding: 10px 0;}
+.accordeon .item .label span{width: 100px;height: auto;padding-right: 10px;text-transform: uppercase;color: var(--gray);font-weight: normal;}
+.accordeon .item .label input{width: 100%;height: 35px;padding: 0 10px;border: 1px solid var(--light-gray);border-radius: 3px;}
+.accordeon .item .label input:focus{outline: none}
+.accordeon .item .label input::placeholder{color: var(--gray);}
+.accordeon .item .containerBtn{width: 100%;height: auto;padding: 10px 0;text-align: right;margin-top: 10px;}
+.accordeon .item .button{display: inline-block;width: auto;height: auto;padding: 10px 20px;border: 2px solid var(--yellow);border-radius: 5px;background: var(--yellow);color: var(--white);transition: all .4s ease-in-out;}
+.accordeon .item .button ion-icon,
+.accordeon .item .button span{display: inline-block;vertical-align: middle;}
+.accordeon .item .button ion-icon{width: 15px;height: 20px;}
+.accordeon .item .button:hover{cursor: pointer;background: var(--white);color: var(--yellow);}
+
+#socials p{color: var(--gray);margin-bottom: 10px;text-align: center;}
+.container-socials{display: flex;flex-flow: row;justify-content: space-evenly;}
+.container-socials a{display: inline-block;width: auto;height: auto;padding: 5px;font-size: small;text-decoration: none;border: 1px solid var(--light-gray);border-radius: 3px;color: var(--gray);background: var(--white);transition: all .4s ease-in-out;}
+.container-socials a:hover{background: var(--yellow);color: var(--white);border-color: var(--yellow);}
+.container-socials a ion-icon,
+.container-socials a span{vertical-align: middle;}
+@keyframes fadeIn{from{opacity: 0;}to{opacity: 1;}}
+@keyframes fadeInUp{from{opacity: 0;transform: translateY(100px);}to{opacity: 1;transform: translateY(0);}}
+
+@media (max-width: 320px){
+    .accordeon .item .label{flex-flow: column;}
+    .accordeon .item .label span,
+    .accordeon .item .label .input{width: 100%;text-align: left;}
+    .accordeon .item .label span{height: 35px;line-height: 35px;}
+}
+
+#footer{position: absolute;bottom: 0;left: 0;width: 100%;height: 50px;text-align: center;color: var(--gray);}
